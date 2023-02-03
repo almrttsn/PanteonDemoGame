@@ -22,7 +22,7 @@ public class BarracksCreatorUtility : MonoBehaviour
         {
             for (int j = 0; j < _gridWidthPositive; j++)
             {
-                var block = Instantiate(_barracksMaterial, new Vector3((_gridHeightPositive - i) * _spacing - 0.56f, (_gridWidthPositive - j) * _spacing - 0.56f, -0.5f), Quaternion.identity, parentObject.transform);
+                var block = Instantiate(_barracksMaterial, new Vector3((_gridHeightPositive - i) * _spacing - 0.56f, (_gridWidthPositive - j) * _spacing - 0.56f, -2), Quaternion.identity, parentObject.transform);
             }
         }
 
@@ -30,7 +30,7 @@ public class BarracksCreatorUtility : MonoBehaviour
         {
             for (int j = _gridWidthNegative; j < 0; j++)
             {
-                var block = Instantiate(_barracksMaterial, new Vector3((_gridHeightNegative - i) * _spacing - 0.56f, (_gridWidthNegative - j) * _spacing - 0.56f, -0.5f), Quaternion.identity, parentObject.transform);
+                var block = Instantiate(_barracksMaterial, new Vector3((_gridHeightNegative - i) * _spacing - 0.56f, (_gridWidthNegative - j) * _spacing - 0.56f, -2), Quaternion.identity, parentObject.transform);
             }
         }
 
@@ -38,7 +38,7 @@ public class BarracksCreatorUtility : MonoBehaviour
         {
             for (int j = _gridWidthNegative; j < 0; j++)
             {
-                var block = Instantiate(_barracksMaterial, new Vector3((_gridHeightPositive - i) * _spacing - 0.56f, (_gridWidthNegative - j) * _spacing - 0.56f, -0.5f), Quaternion.identity, parentObject.transform);
+                var block = Instantiate(_barracksMaterial, new Vector3((_gridHeightPositive - i) * _spacing - 0.56f, (_gridWidthNegative - j) * _spacing - 0.56f, -2), Quaternion.identity, parentObject.transform);
             }
         }
 
@@ -46,7 +46,7 @@ public class BarracksCreatorUtility : MonoBehaviour
         {
             for (int j = 0; j < _gridWidthPositive; j++)
             {
-                var block = Instantiate(_barracksMaterial, new Vector3((_gridHeightNegative - i) * _spacing - 0.56f, (_gridWidthPositive - j) * _spacing - 0.56f, -0.5f), Quaternion.identity, parentObject.transform);
+                var block = Instantiate(_barracksMaterial, new Vector3((_gridHeightNegative - i) * _spacing - 0.56f, (_gridWidthPositive - j) * _spacing - 0.56f, -2), Quaternion.identity, parentObject.transform);
             }
         }
     }
