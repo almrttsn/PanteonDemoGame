@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 638020919398948723}
   - component: {fileID: 3061788949613584384}
   m_Layer: 0
-  m_Name: BarracksMaterial
+  m_Name: BuildingMaterial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
