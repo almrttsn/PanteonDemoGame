@@ -22,4 +22,9 @@ public class SlotController : MonoBehaviour
             }
         }
     }
+
+    private void OnDestroy()
+    {
+        _letterController.TagToOpenLetter -= IsRelatedTagArrived;
+    }
 }

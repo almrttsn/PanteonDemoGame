@@ -10,6 +10,7 @@ public class SlotBehaviour : MonoBehaviour
     private void Start()
     {
         _text = GetComponentInChildren<TextMesh>();
+        _text.gameObject.SetActive(false);
         _text.text = gameObject.tag.ToString();   
     }
 }
