@@ -16,15 +16,26 @@ public class BuildingCreatorUtility : MonoBehaviour
     private int _negativeWidthAmount;
     private int _positiveHeightAmount;
     private int _negativeHeightAmount;
+    private GameObject _instantiatedBuilding;
 
-    public void BuildBarracks()
+    public void BuildBarracks() //for button
     {
         CreateBuilding(BuildingTypes.Barracks);
     }
-    public void BuildPowerPlant()
+    public void BuildPowerPlant() //for button
     {
         CreateBuilding(BuildingTypes.PowerPlant);
     }
+
+    //private void Update()
+    //{
+    //    if (_instantiatedBuilding != null)
+    //    {
+    //        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    //        _instantiatedBuilding.transform.position = new Vector2(cursorPos.x, cursorPos.y);
+    //        Debug.Log(_instantiatedBuilding.transform.position);
+    //    }
+    //}
 
     public void CreateBuilding(BuildingTypes buildingType)
     {
@@ -33,7 +44,7 @@ public class BuildingCreatorUtility : MonoBehaviour
         if (buildingType == BuildingTypes.Barracks)
         {
             parentObject.AddComponent<BarracksBehaviour>();
-            _positiveWidthAmount  = 4;
+            _positiveWidthAmount = 4;
             _negativeWidthAmount = 4;
             _positiveHeightAmount = 4;
             _negativeHeightAmount = 4;
@@ -79,5 +90,7 @@ public class BuildingCreatorUtility : MonoBehaviour
                 var block = Instantiate(_buildingMaterial, new Vector3((_negativeHeightAmount - i) * _spacing - 0.56f, (_positiveWidthAmount - j) * _spacing - 0.56f, -2), Quaternion.identity, parentObject.transform);
             }
         }
+        //parentObject = _instantiatedBuilding;
+        //Debug.Log(_instantiatedBuilding.ToString());
     }
 }
