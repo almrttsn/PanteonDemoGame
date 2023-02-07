@@ -1,7 +1,9 @@
+using MangoramaStudio.Scripts.Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelBehaviour : MonoBehaviour
 {
@@ -10,6 +12,7 @@ public class LevelBehaviour : MonoBehaviour
 
     [SerializeField] private float _winPanelDelayTime;
     [SerializeField] private float _losePanelDelayTime;
+    [SerializeField] private Text _moneyTextPanel;
 
     private GameManager _gameManager;
 
@@ -25,6 +28,12 @@ public class LevelBehaviour : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        PlayerData.PlayerMoney = 1000;
+        _moneyTextPanel.text = "Your money is: " + PlayerData.PlayerMoney.ToString();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown("c"))
@@ -36,6 +45,7 @@ public class LevelBehaviour : MonoBehaviour
         {
             LevelFailed();
         }
+        _moneyTextPanel.text = "Your money is: " + PlayerData.PlayerMoney.ToString();
     }
 
     private void OnDestroy()

@@ -7,6 +7,16 @@ namespace MangoramaStudio.Scripts.Data
 {
     public static class PlayerData
     {
+        public static int PlayerMoney
+        {
+            get => PlayerPrefs.GetInt("PlayerMoney", 100);
+
+            set
+            {
+                PlayerPrefs.SetInt("PlayerMoney", value);
+            }
+        }
+
         public static int CurrentLevelId
         {
             get => PlayerPrefs.GetInt("CurrentLevelId", 1); 
