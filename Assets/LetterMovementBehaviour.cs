@@ -10,18 +10,24 @@ public class LetterMovementBehaviour : MonoBehaviour
     private Vector3 _startPos;
     private Vector3 _endPos;
     private Vector3 _centerOfCircle;
+    private LetterBehaviour _letterBehaviour;
 
 
     private void Start()
     {
+        _letterBehaviour =  this.GetComponent<LetterBehaviour>();
         _startPos = transform.position;
         SlotMatching();
         _centerOfCircle = new Vector3((_endPos.x - _startPos.x) / 2 - _circularMovementRadius, (_endPos.y - _startPos.y) / 2, 0);
+        Debug.Log(_centerOfCircle);
     }
 
     private void Update()
     {
-        transform.position = Vector3.Slerp(transform.position - _centerOfCircle, _endPos - _centerOfCircle, Time.deltaTime) + _centerOfCircle;
+        if (_letterBehaviour._freeToMove == true)
+        {
+            transform.position = Vector3.Slerp(transform.position - _centerOfCircle, _endPos - _centerOfCircle, Time.deltaTime) + _centerOfCircle;
+        }
     }
 
     private void SlotMatching()
