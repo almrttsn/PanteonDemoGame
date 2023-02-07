@@ -1,3 +1,4 @@
+using MangoramaStudio.Scripts.Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ public class LetterBehaviour : MonoBehaviour
     private void OnMouseDown()
     {
         OnClickedALetter?.Invoke(this);
+        PlayerData.PlayerMoney -= 100;
         Destroy(gameObject);
     }
 }
