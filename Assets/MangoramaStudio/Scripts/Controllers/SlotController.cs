@@ -7,6 +7,7 @@ public class SlotController : MonoBehaviour
     public List<SlotBehaviour> Slots => _slots;
     [SerializeField] private List<SlotBehaviour> _slots;
     [SerializeField] private LetterController _letterController;
+    private SlotBehaviour _letterToOpen;
 
     private void Start()
     {
@@ -17,11 +18,19 @@ public class SlotController : MonoBehaviour
     {
         for (int i = 0; i < _slots.Count; i++)
         {
-            if(_slots[i].tag == relatedTag)
+            if (_slots[i].tag == relatedTag)
             {
-                _slots[i].Text.gameObject.SetActive(true);
+                StartCoroutine(SlotActivateCo());
+                //_slots[i].Text.gameObject.SetActive(true);
+                _letterToOpen = _slots[i];
             }
         }
+    }
+
+    private IEnumerator SlotActivateCo()
+    {
+        yield return new WaitForSeconds(3f);
+        _letterToOpen.Text.gameObject.SetActive(true);
     }
 
     private void OnDestroy()

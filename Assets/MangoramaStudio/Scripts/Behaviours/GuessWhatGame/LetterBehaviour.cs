@@ -26,7 +26,7 @@ public class LetterBehaviour : MonoBehaviour
     private IEnumerator LetterMoveCo()
     {
         _freeToMove = true;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         Destroy(gameObject);
 
     }
