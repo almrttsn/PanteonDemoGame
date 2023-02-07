@@ -9,10 +9,10 @@ public class SlotController : MonoBehaviour
 
     private void Start()
     {
-        _letterController.TagToOpenLetter += IsRelatedTagArrived;
+        _letterController.OnRelatedTagArrived += RelatedTagArrived;
     }
 
-    private void IsRelatedTagArrived(string relatedTag)
+    private void RelatedTagArrived(string relatedTag)
     {
         for (int i = 0; i < _slots.Count; i++)
         {
@@ -25,6 +25,6 @@ public class SlotController : MonoBehaviour
 
     private void OnDestroy()
     {
-        _letterController.TagToOpenLetter -= IsRelatedTagArrived;
+        _letterController.OnRelatedTagArrived -= RelatedTagArrived;
     }
 }
