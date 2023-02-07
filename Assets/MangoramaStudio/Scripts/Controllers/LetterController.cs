@@ -18,7 +18,7 @@ public class LetterController : MonoBehaviour
 
     private void ClickedOnALetter(LetterBehaviour clickedLetter)
     {
-        Debug.Log("from event: " + clickedLetter.tag.ToString());
+        //Debug.Log("from event: " + clickedLetter.tag.ToString());
         OnRelatedTagArrived?.Invoke(clickedLetter.tag);
     }
 

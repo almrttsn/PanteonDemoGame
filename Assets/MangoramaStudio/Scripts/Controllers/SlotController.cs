@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SlotController : MonoBehaviour
 {
+    public List<SlotBehaviour> Slots => _slots;
     [SerializeField] private List<SlotBehaviour> _slots;
     [SerializeField] private LetterController _letterController;
 
