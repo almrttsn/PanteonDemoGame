@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LetterBehaviour : MonoBehaviour
 {
-    public event Action<LetterBehaviour> ClickedOnALetter;
+    public event Action<LetterBehaviour> OnClickedALetter;
     [SerializeField] private TextMesh text;
 
     private void Start()
@@ -15,7 +15,7 @@ public class LetterBehaviour : MonoBehaviour
 
     private void OnMouseDown()
     {
-        ClickedOnALetter?.Invoke(this);
+        OnClickedALetter?.Invoke(this);
         Destroy(gameObject);
     }
 }
