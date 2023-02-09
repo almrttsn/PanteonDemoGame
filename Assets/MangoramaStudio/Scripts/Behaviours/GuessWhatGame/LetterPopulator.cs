@@ -25,6 +25,7 @@ public class LetterPopulator : MonoBehaviour
         _letterBehaviour = letterBehaviour;
         _text = _letterBehaviour.GetComponentInChildren<TextMesh>();
         var instantiatedLetter = Instantiate(_letterBehaviour, _letterTransform, Quaternion.identity);
+        instantiatedLetter.transform.parent = gameObject.transform;
         _text.text = _letterBehaviour.tag.ToString();
         OnLetterReadyToMove?.Invoke(instantiatedLetter,true);
     }    
