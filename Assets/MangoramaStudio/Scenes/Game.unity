@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 25771194}
   - component: {fileID: 25771192}
   - component: {fileID: 25771190}
+  - component: {fileID: 25771191}
   m_Layer: 0
   m_Name: LetterBehaviour (5)
   m_TagString: A
@@ -346,6 +347,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &25771191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25771188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &25771192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,6 +943,7 @@ GameObject:
   - component: {fileID: 97387446}
   - component: {fileID: 97387444}
   - component: {fileID: 97387442}
+  - component: {fileID: 97387443}
   m_Layer: 0
   m_Name: LetterBehaviour (9)
   m_TagString: E
@@ -976,6 +992,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &97387443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97387440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &97387444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2908,6 +2938,7 @@ GameObject:
   - component: {fileID: 455616751}
   - component: {fileID: 455616749}
   - component: {fileID: 455616747}
+  - component: {fileID: 455616748}
   m_Layer: 0
   m_Name: LetterBehaviour (6)
   m_TagString: D
@@ -2956,6 +2987,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &455616748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455616745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &455616749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3702,6 +3747,7 @@ GameObject:
   - component: {fileID: 671275947}
   - component: {fileID: 671275945}
   - component: {fileID: 671275943}
+  - component: {fileID: 671275944}
   m_Layer: 0
   m_Name: LetterBehaviour (1)
   m_TagString: F
@@ -3750,6 +3796,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &671275944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671275941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &671275945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3922,6 +3982,7 @@ GameObject:
   - component: {fileID: 889217659}
   - component: {fileID: 889217657}
   - component: {fileID: 889217655}
+  - component: {fileID: 889217656}
   m_Layer: 0
   m_Name: LetterBehaviour (4)
   m_TagString: H
@@ -3970,6 +4031,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &889217656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889217653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &889217657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4523,6 +4598,7 @@ GameObject:
   - component: {fileID: 1091030760}
   - component: {fileID: 1091030758}
   - component: {fileID: 1091030756}
+  - component: {fileID: 1091030757}
   m_Layer: 0
   m_Name: LetterBehaviour (7)
   m_TagString: I
@@ -4571,6 +4647,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1091030757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091030754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &1091030758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6267,6 +6357,7 @@ GameObject:
   - component: {fileID: 1637260551}
   - component: {fileID: 1637260549}
   - component: {fileID: 1637260547}
+  - component: {fileID: 1637260548}
   m_Layer: 0
   m_Name: LetterBehaviour (2)
   m_TagString: B
@@ -6315,6 +6406,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1637260548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637260545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &1637260549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7101,6 +7206,7 @@ GameObject:
   - component: {fileID: 1827133147}
   - component: {fileID: 1827133145}
   - component: {fileID: 1827133143}
+  - component: {fileID: 1827133144}
   m_Layer: 0
   m_Name: LetterBehaviour (3)
   m_TagString: T
@@ -7149,6 +7255,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1827133144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827133141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &1827133145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7287,6 +7407,7 @@ GameObject:
   - component: {fileID: 1851442277}
   - component: {fileID: 1851442275}
   - component: {fileID: 1851442273}
+  - component: {fileID: 1851442274}
   m_Layer: 0
   m_Name: LetterBehaviour (8)
   m_TagString: L
@@ -7335,6 +7456,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1851442274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851442271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &1851442275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7412,6 +7547,7 @@ GameObject:
   - component: {fileID: 1860688321}
   - component: {fileID: 1860688319}
   - component: {fileID: 1860688317}
+  - component: {fileID: 1860688318}
   m_Layer: 0
   m_Name: LetterBehaviour (11)
   m_TagString: O
@@ -7460,6 +7596,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1860688318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860688315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &1860688319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7537,6 +7687,7 @@ GameObject:
   - component: {fileID: 1881414128}
   - component: {fileID: 1881414126}
   - component: {fileID: 1881414124}
+  - component: {fileID: 1881414125}
   m_Layer: 0
   m_Name: LetterBehaviour (10)
   m_TagString: R
@@ -7585,6 +7736,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1881414125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881414122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 5
+  _slotController: {fileID: 477405115}
 --- !u!114 &1881414126
 MonoBehaviour:
   m_ObjectHideFlags: 0
