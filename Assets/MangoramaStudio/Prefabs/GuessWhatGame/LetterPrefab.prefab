@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7731576240355250309}
   - component: {fileID: 7731576240355250308}
-  - component: {fileID: 7731576240355250305}
   - component: {fileID: 7731576240355250310}
+  - component: {fileID: 7731576240355250305}
   - component: {fileID: 7731576240355250311}
+  - component: {fileID: 7385917569469152683}
   m_Layer: 0
-  m_Name: LetterBehaviour
+  m_Name: LetterPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,19 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7731576240355250305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7731576240355250315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 285e9a2dcfe5c454cbff11fc6144a1bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 7731576240412312115}
 --- !u!61 &7731576240355250310
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -126,6 +114,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7731576240355250305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7731576240355250315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285e9a2dcfe5c454cbff11fc6144a1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 7731576240412312115}
 --- !u!114 &7731576240355250311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +140,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _circularMovementRadius: 1
+  _slotController: {fileID: 0}
+--- !u!114 &7385917569469152683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7731576240355250315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1d18d9c9d045a7489ad4f8953956fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _circularMovementRadius: 2
   _slotController: {fileID: 0}
 --- !u!1 &7731576240412312113
 GameObject:
