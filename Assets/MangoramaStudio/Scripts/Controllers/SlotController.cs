@@ -21,7 +21,6 @@ public class SlotController : MonoBehaviour
             if (_slots[i].tag == relatedTag)
             {
                 StartCoroutine(SlotActivateCo());
-                //_slots[i].Text.gameObject.SetActive(true);
                 _letterToOpen = _slots[i];
             }
         }
