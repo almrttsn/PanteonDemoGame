@@ -19,7 +19,6 @@ public class LetterMovementBehaviour : MonoBehaviour
     {
         _letterPopulator.OnLetterReadyToMove += LetterReadyToMove;
         _startPos = transform.position;
-        _centerOfCircle = new Vector3((_endPos.x - _startPos.x) / 2 - _circularMovementRadius, (_endPos.y - _startPos.y) / 2, 0);
     }
 
     private void LetterReadyToMove(LetterBehaviour movingLetter,bool isLetterReadyToMove)
@@ -27,6 +26,8 @@ public class LetterMovementBehaviour : MonoBehaviour
         _letterBehaviour = movingLetter;
         _isLetterReadyToMove = isLetterReadyToMove;
         SlotMatching();
+        _centerOfCircle = new Vector3((_endPos.x - _startPos.x) / 2 - _circularMovementRadius, (_endPos.y - _startPos.y) / 2, 0);
+
     }
 
     private void Update()
