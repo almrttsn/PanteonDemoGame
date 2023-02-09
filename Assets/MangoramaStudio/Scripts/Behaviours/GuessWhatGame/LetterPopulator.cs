@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class LetterPopulator : MonoBehaviour
 {
+    public event Action<LetterBehaviour,bool> OnLetterReadyToMove;
     [SerializeField] private List<LetterBehaviour> _letters;
     private Vector3 _letterTransform;
     private LetterBehaviour _letterBehaviour;
@@ -14,24 +15,32 @@ public class LetterPopulator : MonoBehaviour
     {
         for (int i = 0; i < _letters.Count; i++)
         {
-            _letters[i].OnLetterTransformReady += LetterTransformReady;
+            _letters[i].OnClickedALetter += ClickedOnALetter;
         }
     }
 
-    private void LetterTransformReady(Vector3 letterTransform,LetterBehaviour letterBehaviour)
+    private void ClickedOnALetter(LetterBehaviour letterBehaviour, Vector3 letterTransform)
     {
         _letterTransform = letterTransform;
         _letterBehaviour = letterBehaviour;
         _text = _letterBehaviour.GetComponentInChildren<TextMesh>();
-        Instantiate(_letterBehaviour, _letterTransform, Quaternion.identity);
+        var instantiatedLetter = Instantiate(_letterBehaviour, _letterTransform, Quaternion.identity);
         _text.text = _letterBehaviour.tag.ToString();
-    }
+        OnLetterReadyToMove?.Invoke(instantiatedLetter,true);
+    }    
+
+    //private IEnumerator LetterMoveCo(bool freeToMove)
+    //{
+    //    _freeToMove = freeToMove;
+    //    yield return new WaitForSeconds(3f);
+    //    Destroy(gameObject);
+    //}
 
     private void OnDestroy()
     {
         for (int i = 0; i < _letters.Count; i++)
         {
-            _letters[i].OnLetterTransformReady -= LetterTransformReady;
+            _letters[i].OnClickedALetter -= ClickedOnALetter;
         }
     }
 }

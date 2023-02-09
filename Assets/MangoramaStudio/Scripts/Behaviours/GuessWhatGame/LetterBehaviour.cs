@@ -6,10 +6,8 @@ using UnityEngine;
 
 public class LetterBehaviour : MonoBehaviour
 {
-    public bool _freeToMove { get; set; }
-    public event Action<LetterBehaviour> OnClickedALetter;
+    public event Action<LetterBehaviour,Vector3> OnClickedALetter;
     [SerializeField] private TextMesh text;
-
 
     private void Start()
     {
@@ -18,16 +16,8 @@ public class LetterBehaviour : MonoBehaviour
 
     private void OnMouseDown()
     {
-        OnClickedALetter?.Invoke(this);
-        StartCoroutine(LetterMoveCo());
+        OnClickedALetter?.Invoke(this,transform.position);
+        gameObject.SetActive(false);
         PlayerData.PlayerMoney -= 100;
-    }
-
-    private IEnumerator LetterMoveCo()
-    {
-        _freeToMove = true;
-        yield return new WaitForSeconds(3f);
-        Destroy(gameObject);
-
     }
 }

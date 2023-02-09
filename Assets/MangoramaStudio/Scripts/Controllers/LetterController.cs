@@ -16,7 +16,7 @@ public class LetterController : MonoBehaviour
         }
     }
 
-    private void ClickedOnALetter(LetterBehaviour clickedLetter)
+    private void ClickedOnALetter(LetterBehaviour clickedLetter, Vector3 letterTransform)
     {
         OnRelatedTagArrived?.Invoke(clickedLetter.tag);
     }
