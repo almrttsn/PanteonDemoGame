@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,21 +21,29 @@ public class LetterMovementBehaviour : MonoBehaviour
         _startPos = transform.position;
     }
 
-    private void LetterReadyToMove(LetterBehaviour letter,bool readyToMove)
+    private void LetterReadyToMove(LetterBehaviour letter, bool readyToMove)
     {
         _letterBehaviour = letter;
         SlotMatching();
         Debug.Log("endPosX" + _endPos.x);
         Debug.Log("endPosY" + _endPos.y);
-        _centerOfCircle = new Vector3((_endPos.x - _startPos.x) / 2 - _circularMovementRadius, (_endPos.y - _startPos.y) / 2, 0);
+        //_centerOfCircle = new Vector3((_endPos.x - _startPos.x) / 2 - _circularMovementRadius, (_endPos.y - _startPos.y) / 2, 0);
         _isLetterReadyToMove = readyToMove;
+        StartCoroutine(LetterDeactivateCo(_letterBehaviour));
+    }
+
+    private IEnumerator LetterDeactivateCo(LetterBehaviour letterBehaviour)
+    {
+        yield return new WaitForSeconds(1f);
+        letterBehaviour.gameObject.SetActive(false);
     }
 
     private void Update()
     {
         if (_isLetterReadyToMove == true)
         {
-             _letterBehaviour.transform.position = Vector3.Slerp(transform.position - _centerOfCircle, _endPos - _centerOfCircle, Time.deltaTime) + _centerOfCircle;
+            //_letterBehaviour.transform.position = Vector3.Slerp(_startPos - _centerOfCircle, _endPos - _centerOfCircle, 1f) + _centerOfCircle;
+            _letterBehaviour.transform.DOMove(_endPos, 3f);
         }
     }
 
