@@ -19,6 +19,20 @@ public class LetterController : MonoBehaviour
     private void ClickedOnALetter(LetterBehaviour clickedLetter, Vector3 letterTransform)
     {
         OnRelatedTagArrived?.Invoke(clickedLetter.tag);
+        StartCoroutine(DisableClickLetterCo());
+    }
+
+    private IEnumerator DisableClickLetterCo()
+    {
+        for (int i = 0; i < _letters.Count; i++)
+        {
+            _letters[i].PlayerCanClick = false;
+        }
+        yield return new WaitForSeconds(5f);
+        for (int i = 0; i < _letters.Count; i++)
+        {
+            _letters[i].PlayerCanClick = true;
+        }
     }
 
     private void OnDestroy()
@@ -27,6 +41,5 @@ public class LetterController : MonoBehaviour
         {
             _letters[i].OnClickedALetter -= ClickedOnALetter;
         }
-
     }
 }
