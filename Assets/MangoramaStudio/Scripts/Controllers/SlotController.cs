@@ -27,7 +27,7 @@ public class SlotController : MonoBehaviour
     }
 
     private IEnumerator SlotActivateCo()
-    {
+    {        
         yield return new WaitForSeconds(3f);
         _letterToOpen.Text.gameObject.SetActive(true);
     }

@@ -21,21 +21,14 @@ public class LetterPopulator : MonoBehaviour
 
     private void ClickedOnALetter(LetterBehaviour letterBehaviour, Vector3 letterTransform)
     {
-        _letterTransform = letterTransform;
         _letterBehaviour = letterBehaviour;
-        _text = _letterBehaviour.GetComponentInChildren<TextMesh>();
+        _letterTransform = letterTransform;
         var instantiatedLetter = Instantiate(_letterBehaviour, _letterTransform, Quaternion.identity);
         instantiatedLetter.transform.parent = gameObject.transform;
+        _text = _letterBehaviour.GetComponentInChildren<TextMesh>();
         _text.text = _letterBehaviour.tag.ToString();
         OnLetterReadyToMove?.Invoke(instantiatedLetter,true);
-    }    
-
-    //private IEnumerator LetterMoveCo(bool freeToMove)
-    //{
-    //    _freeToMove = freeToMove;
-    //    yield return new WaitForSeconds(3f);
-    //    Destroy(gameObject);
-    //}
+    }
 
     private void OnDestroy()
     {

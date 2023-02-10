@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class LetterBehaviour : MonoBehaviour
 {
-    public event Action<LetterBehaviour,Vector3> OnClickedALetter;
+
+    public event Action<LetterBehaviour, Vector3> OnClickedALetter;
     [SerializeField] private TextMesh text;
 
     private void Start()
@@ -16,7 +17,7 @@ public class LetterBehaviour : MonoBehaviour
 
     private void OnMouseDown()
     {
-        OnClickedALetter?.Invoke(this,transform.position);
+        OnClickedALetter?.Invoke(this, transform.position);
         gameObject.SetActive(false);
         PlayerData.PlayerMoney -= 100;
     }
